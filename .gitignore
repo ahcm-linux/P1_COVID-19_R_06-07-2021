@@ -1,5 +1,1 @@
-outputs/figures/pdf/*.pdf
-outputs/figures/png/*.png
-outputs/tables/html/*.html
-outputs/tables/csv/*.csv
 *.RData

@@ -1,0 +1,18 @@
+Estimates;Lower Limit Bootstrap CI;Upper Limit Bootstrap CI
+(Intercept);3766.61;3194.36;4341.05
+Gender [Male];395.31;-360.82;1067.18
+Outcome [Dead];7609.78;5807.05;9732.87
+Time [1st term];5233.17;3523.6;6837.81
+Time [2nd term];-9628.89;-12029.36;-7278.7
+Time [3rd term];1055.49;-534.03;2854.51
+Gender [Male]:Time [1st term];-1385.81;-3501.03;827.57
+Gender [Male]:Time [2nd term];4142.56;743.76;7729.64
+Gender [Male]:Time [3rd term];-391.96;-2716.62;1971.3
+Outcome [Dead]:Time [1st term];725.04;-4088.95;5664.45
+Outcome [Dead]:Time [2nd term];-9264.94;-13801.84;-4218.8
+Outcome [Dead]:Time [3rd term];3245.93;-23.06;6931.59
+tau00id_pacient;4469189;NA;NA
+sigma2;5786749;NA;NA
+ICC;0.44;NA;NA
+Nid_pacient;237;NA;NA
+Observations;1027;NA;NA
