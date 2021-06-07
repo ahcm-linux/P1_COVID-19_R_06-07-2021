@@ -407,49 +407,49 @@ base::names(models_tables) <- base::names(analytes_fit)
 ## Plots ------------------------------------------------------------------------------------------------------
 
 # gender trajectories
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "Fig_Sample_Trajectories_", "Gender", ".pdf"), plot = plot_gender_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "Fig_Sample_Trajectories_", "Gender", ".png"), plot = plot_gender_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "Fig_Sample_Trajectories_", "Gender", ".jpg"), plot = plot_gender_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "FigA1", ".pdf"), plot = plot_gender_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "FigA1", ".png"), plot = plot_gender_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "FigA1", ".jpg"), plot = plot_gender_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
 
 # outcome trajectories
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "Fig_Sample_Trajectories_", "Outcome", ".pdf"), plot = plot_outcome_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "Fig_Sample_Trajectories_", "Outcome", ".png"), plot = plot_outcome_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "Fig_Sample_Trajectories_", "Outcome", ".jpg"), plot = plot_outcome_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "FigA2", ".pdf"), plot = plot_outcome_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "FigA2", ".png"), plot = plot_outcome_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "FigA2", ".jpg"), plot = plot_outcome_trajectories, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
 
 # percentages and sum trajectories
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "Fig_Sample_Trajectories_", "Count-and-Percentages-Male-Dead", ".pdf"), plot = plot_perc_sum_trajectories, width = 2 * 105, height = 1.7 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "Fig_Sample_Trajectories_", "Count-and-Percentages-Male-Dead", ".png"), plot = plot_perc_sum_trajectories, width = 2 * 105, height = 1.7 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "Fig_Sample_Trajectories_", "Count-and-Percentages-Male-Dead", ".jpg"), plot = plot_perc_sum_trajectories, width = 2 * 105, height = 1.7 * 74.25, units = "mm", dpi = 100)
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "FigS1", ".pdf"), plot = plot_perc_sum_trajectories, width = 2 * 105, height = 1.7 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "FigS1", ".png"), plot = plot_perc_sum_trajectories, width = 2 * 105, height = 1.7 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "FigS1", ".jpg"), plot = plot_perc_sum_trajectories, width = 2 * 105, height = 1.7 * 74.25, units = "mm", dpi = 100)
 
 # time
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "Fig_Model_Predictions_", "Time-Global-Trend", ".pdf"), plot = plot_time, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "Fig_Model_Predictions_", "Time-Global-Trend", ".png"), plot = plot_time, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "Fig_Model_Predictions_", "Time-Global-Trend", ".jpg"), plot = plot_time, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "FigS2", ".pdf"), plot = plot_time, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "FigS2", ".png"), plot = plot_time, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "FigS2", ".jpg"), plot = plot_time, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
 
 # time x gender
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "Fig_Model_Predictions_", "Time-Gender-Trend", ".pdf"), plot = plot_time_gender, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "Fig_Model_Predictions_", "Time-Gender-Trend", ".png"), plot = plot_time_gender, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "Fig_Model_Predictions_", "Time-Gender-Trend", ".jpg"), plot = plot_time_gender, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "FigA3", ".pdf"), plot = plot_time_gender, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "FigA3", ".png"), plot = plot_time_gender, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "FigA3", ".jpg"), plot = plot_time_gender, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
 
 # tme x outcome
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "Fig_Model_Predictions_", "Time-Outcome-Trend", ".pdf"), plot = plot_time_outcome, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "Fig_Model_Predictions_", "Time-Outcome-Trend", ".png"), plot = plot_time_outcome, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "Fig_Model_Predictions_", "Time-Outcome-Trend", ".jpg"), plot = plot_time_outcome, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "FigA4", ".pdf"), plot = plot_time_outcome, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "FigA4", ".png"), plot = plot_time_outcome, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
+ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "FigA4", ".jpg"), plot = plot_time_outcome, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
 
 # uncomment the code below to save plots of residuals
 
 #save_plot_residuals <- base::lapply(1:base::length(plot_residuals), function(.x) {
 #  p <- plot_residuals[[.x]]
 #  title <- analytes_labels_long[base::names(plot_residuals)[.x]]
-#  ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "Fig_Model_Residuals_", title, ".pdf"), plot = p, width = 2 * 105, height = 1.5 * 74.25, units = "mm")
-#  ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "Fig_Model_Residuals_", title, ".png"), plot = p, width = 2 * 105, height = 1.5 * 74.25, units = "mm")
-#  ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "Fig_Model_Residuals_", title, ".jpg"), plot = p, width = 2 * 105, height = 1.5 * 74.25, units = "mm", dpi = 100)
+#  ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "FigS3_Model_Residuals_", title, ".pdf"), plot = p, width = 2 * 105, height = 1.5 * 74.25, units = "mm")
+#  ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "FigS3_Model_Residuals_", title, ".png"), plot = p, width = 2 * 105, height = 1.5 * 74.25, units = "mm")
+#  ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "FigS3_Model_Residuals_", title, ".jpg"), plot = p, width = 2 * 105, height = 1.5 * 74.25, units = "mm", dpi = 100)
 #})
 
 ## Tables -----------------------------------------------------------------------------------------------------
 
 # data description (csv)
-utils::write.table(table_desc_data, file = "./outputs/tables/csv/Tab_Sample_Data-Description.csv", sep = ";", quote = FALSE, row.names = FALSE)
+utils::write.table(table_desc_data, file = "./outputs/tables/csv/TabA1.csv", sep = ";", quote = FALSE, row.names = FALSE)
 
 # LMM estimates (csv)
 save_tables_csv <- base::lapply(1:base::length(models_boot_ci_adj), function(.x) {
@@ -475,16 +475,16 @@ save_tables_csv <- base::lapply(1:base::length(models_boot_ci_adj), function(.x)
   
   base::colnames(results) <- base::c("Estimates", "Lower Limit Bootstrap CI", "Upper Limit Bootstrap CI")
   
-  utils::write.table(base::round(results, 2), file = base::paste0("./outputs/tables/csv/", "Tab_Model_Estimates-", title, ".csv"), sep = ";", quote = FALSE, row.names = TRUE, col.names = TRUE)
+  utils::write.table(base::round(results, 2), file = base::paste0("./outputs/tables/csv/", "TabS1_", title, ".csv"), sep = ";", quote = FALSE, row.names = TRUE, col.names = TRUE)
 })
 
 # data description (html)
-utils::write.table(htmlTable::htmlTable(table_desc_data, rnames = FALSE), file = "./outputs/tables/html/Tab_Sample_Data-Description.html", sep = ";", quote = FALSE, row.names = FALSE, col.names = FALSE)
+utils::write.table(htmlTable::htmlTable(table_desc_data, rnames = FALSE), file = "./outputs/tables/html/TabA1.html", sep = ";", quote = FALSE, row.names = FALSE, col.names = FALSE)
 
 # LMM estimates (html)
 save_tables_html <- base::lapply(1:base::length(analytes_fit), function(.x) {
   title <- analytes_labels_long[base::names(analytes_fit)[.x]]
-  utils::write.table(models_tables[[.x]]$page.complete, file = base::paste0("./outputs/tables/html/", "Tab_Model_Estimates-", title, ".html"), quote = FALSE, row.names = FALSE, col.names = FALSE)
+  utils::write.table(models_tables[[.x]]$page.complete, file = base::paste0("./outputs/tables/html/", "TabS1_", title, ".html"), quote = FALSE, row.names = FALSE, col.names = FALSE)
 })
 
 
