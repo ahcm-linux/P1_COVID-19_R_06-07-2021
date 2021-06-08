@@ -1,6 +1,9 @@
+<div style:"text-align:right">
 _Legends for the figures generated as output from the script.R file of folder 'codes'. FigA1 to A4 show the main
 results of the data analysis, while FigS1 and S2 show supplementary results._
+</div>
 
+<div style:"text-align:right; color:red">
 __FigA1:__ (Sample results) Sample trajectories of COVID-19 pacients. Grey lines indicates individual trajectories. 
 	Median trajectories are shown for males and females along with shaded areas representing the interquartile
 	range of observed values. Interquartile range = difference between the 75th and 25th percentiles.
@@ -31,3 +34,4 @@ __FigS2:__ (Inferential results) Time trends of analytes concentration in COVID-
 	alive patients). Shaded areas represent assymptotic confidence intervals with 95% confidence level. Results
 	are based on independent Linear Mixed Models (LMM) fitted for each analyte, as described in the
 	Section of Statistical Methods.
+</div>
