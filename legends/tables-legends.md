@@ -1,10 +1,10 @@
-Legends for the tables generated as output from the script.R file of folder 'codes'. TabA1 shows the main
+_Legends for the tables generated as output from the script.R file of folder 'codes'. TabA1 shows the main
 results of the data analysis, while TabS1 shows supplementary results. The text of TabA2 serves to describe results
-for the models fitted for each analyte. In TabA2, replace [...] by the name of the analyte. 
+for the models fitted for each analyte. In TabA2, replace [...] by the name of the analyte._
 
-[TabA1] (Sample results) Sample description. Number of alive and dead COVID-19 patients in the sample split by gender.
+__TabA1: (Sample results)__ Sample description. Number of alive and dead COVID-19 patients in the sample split by gender.
 
-[TabS1] (Inferential results) Parameter estimates and related confidence intervals (CIs) for the Linear Mixed Model (LMM)
+__TabS1: (Inferential results)__ Parameter estimates and related confidence intervals (CIs) for the Linear Mixed Model (LMM)
 	fitted for the analyte [...]. The column Predictors shows all independent variables (iv's) entering the LMM.
 	Interactions between iv's are represented by the symbol (:). For the Gender and Outcome categorical iv's, the
 	categories of refference for the model are shown between square brackets. The Time iv is continuous and was
