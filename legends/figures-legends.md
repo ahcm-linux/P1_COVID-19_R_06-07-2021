@@ -1,9 +1,9 @@
-<div style:"text-align:right">
+<div style:"text-align:justify, color:red">
 _Legends for the figures generated as output from the script.R file of folder 'codes'. FigA1 to A4 show the main
 results of the data analysis, while FigS1 and S2 show supplementary results._
 </div>
 
-<div style:"text-align:right; color:red">
+<div style:"text-align:justify">
 __FigA1:__ (Sample results) Sample trajectories of COVID-19 pacients. Grey lines indicates individual trajectories. 
 	Median trajectories are shown for males and females along with shaded areas representing the interquartile
 	range of observed values. Interquartile range = difference between the 75th and 25th percentiles.
