@@ -243,28 +243,6 @@ standard_theme <- ggplot2::theme(
   strip.background = ggplot2::element_rect(fill = NA, colour = "black")
 )
 
-# time
-p_time <- base::list()
-for (.x in 1:base::length(analytes_fit)) {
-  analyte <- base::names(analytes_fit)[[.x]]
-  y <- sub_hsl[, analyte]
-  dataset <- base::data.frame(sub_hsl, y = y)
-  
-  base::suppressMessages(
-    p <- sjPlot::plot_model(analytes_fit[[.x]], type = "eff", terms = "midpoint_interval",
-                    robust = TRUE, vcov.fun = "vcovHC", vcov.type = "HC3", show.data = TRUE,
-                    dot.alpha = 0.3, dot.size = 1, line.alpha = 0.8, line.size = 1,
-                    title = analytes_labels_long[analyte]) +
-      ggplot2::scale_y_continuous(breaks = scales::pretty_breaks()) +
-      ggplot2::scale_x_continuous(breaks = scales::pretty_breaks()) +
-      ggplot2::labs(x = "Hospitalization time", y = "Count/ul") +
-      ggplot2::theme_light(base_size = 12) + standard_theme
-    )
-  
-  p_time[[.x]] <- p
-}
-
-plot_time <- gridExtra::arrangeGrob(grobs = p_time, nrow = 2)
 
 # time x gender
 p_time_gender <- base::list()
@@ -395,7 +373,7 @@ models_tables <- base::lapply(1:base::length(analytes_fit), function(.x) {
   html_table$page.complete <- base::gsub("splines::bs\\(midpoint_interval\\)3", "Time [3rd term]", html_table$page.complete)
   html_table$page.complete <- base::gsub("genderM", "Gender [Male]", html_table$page.complete)
   html_table$page.complete <- base::gsub("de_desfechoDead", "Outcome [Dead]", html_table$page.complete)
-  html_table$page.complete <- base::gsub("paciente", "pacient", html_table$page.complete)
+  html_table$page.complete <- base::gsub("paciente", "patient", html_table$page.complete)
   
   base::return(html_table)
 })
@@ -421,11 +399,6 @@ ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "FigS1", ".pdf
 ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "FigS1", ".png"), plot = plot_perc_sum_trajectories, width = 2 * 105, height = 1.7 * 74.25, units = "mm")
 ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "FigS1", ".jpg"), plot = plot_perc_sum_trajectories, width = 2 * 105, height = 1.7 * 74.25, units = "mm", dpi = 100)
 
-# time
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "FigS2", ".pdf"), plot = plot_time, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "FigS2", ".png"), plot = plot_time, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
-ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "FigS2", ".jpg"), plot = plot_time, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm", dpi = 100)
-
 # time x gender
 ggplot2::ggsave(filename = base::paste0("./outputs/figures/pdf/", "FigA3", ".pdf"), plot = plot_time_gender, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
 ggplot2::ggsave(filename = base::paste0("./outputs/figures/png/", "FigA3", ".png"), plot = plot_time_gender, width = 2.5 * 105, height = 2.5 * 74.25, units = "mm")
@@ -449,7 +422,7 @@ ggplot2::ggsave(filename = base::paste0("./outputs/figures/jpg_low-quality/", "F
 ## Tables -----------------------------------------------------------------------------------------------------
 
 # data description (csv)
-utils::write.table(table_desc_data, file = "./outputs/tables/csv/TabA1.csv", sep = ";", quote = FALSE, row.names = FALSE)
+utils::write.table(table_desc_data, file = "./outputs/tables/csv/TabS1.csv", sep = ";", quote = FALSE, row.names = FALSE)
 
 # LMM estimates (csv)
 save_tables_csv <- base::lapply(1:base::length(models_boot_ci_adj), function(.x) {
@@ -465,26 +438,26 @@ save_tables_csv <- base::lapply(1:base::length(models_boot_ci_adj), function(.x)
   base::row.names(results) <- base::gsub("genderM", "Gender [Male]", base::row.names(results))
   base::row.names(results) <- base::gsub("de_desfechoDead", "Outcome [Dead]", base::row.names(results))
   base::row.names(results) <- base::gsub("sigma.e", "sigma2", base::row.names(results))
-  base::row.names(results) <- base::gsub("sigma.u", "tau00id_pacient", base::row.names(results))
+  base::row.names(results) <- base::gsub("sigma.u", "tau00id_patient", base::row.names(results))
   base::row.names(results) <- base::gsub("lambda", "ICC", base::row.names(results))
   
   N <- base::matrix(base::c(base::length(base::unique(sub_hsl$id_paciente)), base::nrow(sub_hsl), base::rep(NA, 4)), ncol = 3)
-  base::rownames(N) <- base::c("Nid_pacient", "Observations")
+  base::rownames(N) <- base::c("Nid_patient", "Observations")
   base::colnames(N) <- base::colnames(results)
   results <- base::rbind(results, N)
   
   base::colnames(results) <- base::c("Estimates", "Lower Limit Bootstrap CI", "Upper Limit Bootstrap CI")
   
-  utils::write.table(base::round(results, 2), file = base::paste0("./outputs/tables/csv/", "TabS1_", title, ".csv"), sep = ";", quote = FALSE, row.names = TRUE, col.names = TRUE)
+  utils::write.table(base::round(results, 2), file = base::paste0("./outputs/tables/csv/", "TabS2_", title, ".csv"), sep = ";", quote = FALSE, row.names = TRUE, col.names = TRUE)
 })
 
 # data description (html)
-utils::write.table(htmlTable::htmlTable(table_desc_data, rnames = FALSE), file = "./outputs/tables/html/TabA1.html", sep = ";", quote = FALSE, row.names = FALSE, col.names = FALSE)
+utils::write.table(htmlTable::htmlTable(table_desc_data, rnames = FALSE), file = "./outputs/tables/html/TabS1.html", sep = ";", quote = FALSE, row.names = FALSE, col.names = FALSE)
 
 # LMM estimates (html)
 save_tables_html <- base::lapply(1:base::length(analytes_fit), function(.x) {
   title <- analytes_labels_long[base::names(analytes_fit)[.x]]
-  utils::write.table(models_tables[[.x]]$page.complete, file = base::paste0("./outputs/tables/html/", "TabS1_", title, ".html"), quote = FALSE, row.names = FALSE, col.names = FALSE)
+  utils::write.table(models_tables[[.x]]$page.complete, file = base::paste0("./outputs/tables/html/", "TabS2_", title, ".html"), quote = FALSE, row.names = FALSE, col.names = FALSE)
 })
 
 

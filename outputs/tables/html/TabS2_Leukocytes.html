@@ -1,0 +1,142 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<style>
+html, body { background-color: white; }
+table { border-collapse:collapse; border:none; }
+caption { font-weight: bold; text-align:left; }
+td {  }
+.thead { border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; }
+.tdata { padding:0.2cm; text-align:left; vertical-align:top; }
+.arc { background-color:#f2f2f2; }
+.summary { padding-top:0.1cm; padding-bottom:0.1cm; }
+.summarydata { text-align:left; }
+.fixedparts { font-weight:bold; text-align:left; }
+.randomparts { font-weight:bold; text-align:left; padding-top:.8em; }
+.zeroparts { font-weight:bold; text-align:left; padding-top:.8em; }
+.simplexparts { font-weight:bold; text-align:left; padding-top:.8em; }
+.lasttablerow { border-bottom: double; }
+.firsttablerow {  }
+.firstsumrow { border-top:1px solid; }
+.labelcellborder { border-bottom:1px solid; }
+.depvarhead { text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal; }
+.depvarheadnodv { border-top: double; text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal; }
+.leftalign { text-align:left; }
+.centeralign { text-align:center; }
+.firsttablecol { text-align:left; }
+.footnote { font-style:italic; border-top:double black; text-align:right; }
+.subtitle { font-weight: normal; }
+.modelcolumn1 {  }
+.modelcolumn2 {  }
+.modelcolumn3 {  }
+.modelcolumn4 {  }
+.modelcolumn5 {  }
+.modelcolumn6 {  }
+.modelcolumn7 {  }
+.col1 {  }
+.col2 {  }
+.col3 {  }
+.col4 {  }
+.col5 {  }
+.col6 {  }
+</style>
+</head>
+<body>
+<table>
+<caption>Linear Mixed Model</caption>
+  <tr>
+    <th class="thead firsttablerow firsttablecol col1">&nbsp;</th>
+    <th colspan="2" class="thead firsttablerow">Leukocytes</th>
+  </tr>
+  <tr>
+    <td class="depvarhead firsttablerow firsttablecol col1">Predictors</td>
+    <td class="depvarhead firsttablerow col2">Estimates</td>
+    <td class="depvarhead firsttablerow col3">Bootstrap CI</td>
+  </tr>
+  <tr>
+    <td class="tdata firsttablecol col1">(Intercept)</td>
+    <td class="tdata centeralign modelcolumn1 col2">5770.39</td>
+    <td class="tdata centeralign modelcolumn1 col3">5176.86&nbsp;&ndash;&nbsp;6485.64 *</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Outcome [Dead]</td>
+    <td class="tdata centeralign modelcolumn1 col2">7930.15</td>
+    <td class="tdata centeralign modelcolumn1 col3">5964.78&nbsp;&ndash;&nbsp;10249.58 *</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Outcome [Dead]:Time [1st term]</td>
+    <td class="tdata centeralign modelcolumn1 col2">&#45;346.71</td>
+    <td class="tdata centeralign modelcolumn1 col3">&#45;5182.45&nbsp;&ndash;&nbsp;4459.19</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Outcome [Dead]:Time [2nd term]</td>
+    <td class="tdata centeralign modelcolumn1 col2">&#45;12031.71</td>
+    <td class="tdata centeralign modelcolumn1 col3">&#45;16827.29&nbsp;&ndash;&nbsp;-7293.8 *</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Outcome [Dead]:Time [3rd term]</td>
+    <td class="tdata centeralign modelcolumn1 col2">2770.94</td>
+    <td class="tdata centeralign modelcolumn1 col3">&#45;831.93&nbsp;&ndash;&nbsp;6321.81</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Gender [Male]</td>
+    <td class="tdata centeralign modelcolumn1 col2">36.82</td>
+    <td class="tdata centeralign modelcolumn1 col3">&#45;846.52&nbsp;&ndash;&nbsp;768.58</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Gender [Male]:Time [1st term]</td>
+    <td class="tdata centeralign modelcolumn1 col2">&#45;819.98</td>
+    <td class="tdata centeralign modelcolumn1 col3">&#45;3139.51&nbsp;&ndash;&nbsp;1612.09</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Gender [Male]:Time [2nd term]</td>
+    <td class="tdata centeralign modelcolumn1 col2">3806.37</td>
+    <td class="tdata centeralign modelcolumn1 col3">&#281.27&nbsp;&ndash;&nbsp;7169.57 *</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Gender [Male]:Time [3rd term]</td>
+    <td class="tdata centeralign modelcolumn1 col2">79.27</td>
+    <td class="tdata centeralign modelcolumn1 col3">&#45;2427.56&nbsp;&ndash;&nbsp;2692.92</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Time [1st term]</td>
+    <td class="tdata centeralign modelcolumn1 col2">7022.67</td>
+    <td class="tdata centeralign modelcolumn1 col3">5182.55&nbsp;&ndash;&nbsp;8723.84 *</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Time [2nd term]</td>
+    <td class="tdata centeralign modelcolumn1 col2">&#45;8303.35</td>
+    <td class="tdata centeralign modelcolumn1 col3">&#45;10597.48&nbsp;&ndash;&nbsp;-5769.6 *</td>
+</tr>
+  <tr>
+    <td class="tdata firsttablecol col1">Time [3rd term]</td>
+    <td class="tdata centeralign modelcolumn1 col2">1342.85</td>
+    <td class="tdata centeralign modelcolumn1 col3">&#45;336.23&nbsp;&ndash;&nbsp;2964.16</td>
+</tr>
+  <tr>
+    <td colspan="3" class="randomparts">Random Effects</td>
+  </tr>
+
+  <tr>
+    <td class="tdata leftalign summary">&sigma;<sup>2</sup></td>
+    <td class="tdata summary summarydata" colspan="2">6474749.96</td>
+
+  <tr>
+    <td class="tdata leftalign summary">&tau;<sub>00</sub> <sub>id_patient</sub></td>
+    <td class="tdata summary summarydata" colspan="2">5239216.03</td>
+
+  <tr>
+    <td class="tdata leftalign summary">ICC</td>
+    <td class="tdata summary summarydata" colspan="2">0.45</td>
+
+  <tr>
+    <td class="tdata leftalign summary">N <sub>id_patient</sub></td>
+    <td class="tdata summary summarydata" colspan="2">237</td>
+  <tr>
+    <td class="tdata leftalign summary firstsumrow">Observations</td>
+    <td class="tdata summary summarydata firstsumrow" colspan="2">1027</td>
+  </tr>
+
+</table>
+
+</body></html>
