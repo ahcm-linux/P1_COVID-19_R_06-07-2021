@@ -1,6 +1,6 @@
 # Presentation
 
-This repository hosts the source code, data resources e results of a statistical data analysis performed in the R software (version 4.0.3).
+This repository hosts the source code, data resources and results of a statistical data analysis performed in the R software (version 4.0.3).
 
 ## Objectives
 
