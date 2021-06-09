@@ -2,4 +2,4 @@
 | :-------- | :----------------------------------------------------- |
 | _ggplot2_ | Graphing statistical results                           |
 | _nlme_    | Specification and fitting of Linear Mixed Models (LMM) |
-| _sjPlot_  | Graphing of LMM results                                |
+| _sjPlot_  | Graphing LMM results                                   |
