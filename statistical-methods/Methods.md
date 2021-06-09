@@ -38,7 +38,7 @@ The mean trajectories predicted by the estimated LMM estimated for each clinical
 
 The statistical analysis described above was performed using the R software version 4.0.3 ([R Core Team, 2020](https://www.R-project.org/)). Statistical graphs were created using the R packages _ggplot2_ ([Wickham, 2016](https://ggplot2.tidyverse.org)) and _sjPLot_ ([Lüdecke, 2021](https://CRAN.R-project.org/package=sjPlot)). LMMs were estimated using the R package _nlme_ ([Pinheiro _et al._, 2020](https://CRAN.R-project.org/package=nlme)). REB bootstrap was implemented using the R code provided as supplemental material in [Chambers and Chandra (2013)](https://www.tandfonline.com/doi/suppl/10.1080/10618600.2012.681216?scroll=top).
 
-The R source code developed for the data analysis can be found at the GitHub repository https://github.com/ahcm-linux/P2-R_COVID-19_2021 (under the commit id: ).
+The R source code developed for the data analysis can be found at the GitHub repository https://github.com/ahcm-linux/P2-R_COVID-19_2021 (under the commit id: cc5900ac4267001f1ad226c7e281e9d347f4752a).
 
 ## References
 
